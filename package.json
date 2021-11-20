@@ -1,0 +1,22 @@
+{
+  "name": "merkle-badges",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/badgeth/badgeth-merkle-module.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.5.1",
+    "graphql": "^15.7.2",
+    "graphql-request": "^3.6.1",
+    "merkletreejs": "^0.2.24"
+  }
+}
