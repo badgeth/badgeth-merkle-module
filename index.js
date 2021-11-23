@@ -1,8 +1,12 @@
 import getBadges from './BadgeFetch.js';
 import BMerkle from './BMerkle.js';
 
-async function fetchBadgesAndGenerateTree(gqlEndpoint, callback) {
-  getBadges(gqlEndpoint, (badges) => {
+const args = process.argv;
+const GQL_ENDPOINT = args[3];
+const GQL_QUERY = args[2];
+
+async function fetchBadgesAndGenerateTree(query, gqlEndpoint, callback) {
+  getBadges(query, gqlEndpoint, (badges) => {
     callback(BMerkle.merkleTreeForBadges(badges));
   });
 }

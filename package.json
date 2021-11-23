@@ -9,7 +9,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node test/test.js"
   },
   "author": "",
   "license": "ISC",

@@ -6,8 +6,8 @@ const { MerkleTree } = merkleTreepkg;
 
 function hashBadge(badgeStruct) {
   return ethers.utils.soliditySha256(
-    ['address', 'uint16'],
-    [badgeStruct.winner.id, badgeStruct.globalBadgeNumber],
+    ['address', 'uint16', 'string'],
+    [badgeStruct.winner.id, badgeStruct.globalBadgeNumber, badgeStruct.definition.id],
   );
 }
 
