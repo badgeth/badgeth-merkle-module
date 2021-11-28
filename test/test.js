@@ -1,7 +1,5 @@
-import graphqlRequest from 'graphql-request';
-const { gql } = graphqlRequest;
-
-import indexPkg from '../index.js';
+const { gql } = require("graphql-request");
+const { fetchBadgesAndGenerateTree } = require("../index.js");
 
 const args = process.argv;
 const GQL_ENDPOINT = args[2];
@@ -24,7 +22,7 @@ const GQL_QUERY = gql`
 logTree();
 
 async function logTree() {
-  const mTree = await indexPkg.fetchBadgesAndGenerateTree(
+  const mTree = await fetchBadgesAndGenerateTree(
     GQL_QUERY, 
     GQL_ENDPOINT
   );
