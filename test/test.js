@@ -21,10 +21,13 @@ const GQL_QUERY = gql`
   }
 `
 
-indexPkg.fetchBadgesAndGenerateTree(
-  GQL_QUERY, 
-  GQL_ENDPOINT, 
-  (tree) => {
-    console.log(tree.toString());
-  }
-);
+
+logTree();
+
+async function logTree() {
+  const mTree = await indexPkg.fetchBadgesAndGenerateTree(
+    GQL_QUERY, 
+    GQL_ENDPOINT
+  );
+  console.log(mTree.toString());
+}

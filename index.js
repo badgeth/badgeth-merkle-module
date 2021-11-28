@@ -5,10 +5,10 @@ const args = process.argv;
 const GQL_ENDPOINT = args[3];
 const GQL_QUERY = args[2];
 
-async function fetchBadgesAndGenerateTree(query, gqlEndpoint, callback) {
-  getBadges(query, gqlEndpoint, (badges) => {
-    callback(BMerkle.merkleTreeForBadges(badges));
-  });
+async function fetchBadgesAndGenerateTree(query, gqlEndpoint) {
+  const badges = await getBadges(query, gqlEndpoint);
+  const mTree = badgesToMerkleTree(badges);
+  return mTree;
 }
 
 function badgesToMerkleTree(badges) {
