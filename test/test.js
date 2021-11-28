@@ -9,7 +9,6 @@ const GQL_ENDPOINT = args[2];
 const GQL_QUERY = gql`
   {
     badgeAwards(first: 64, orderBy: globalBadgeNumber, where: {definition: "Captain Subgraph"}) {
-      id
       globalBadgeNumber
       winner {
         id
