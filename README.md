@@ -1,6 +1,6 @@
 # badgeth-merkle-module
 
-### Getting a merkle tree of badgeAwards from a Badgeth compatible subgraph
+### Get a merkle tree of badgeAwards from a Badgeth compatible subgraph
 ```js
 import { fetchBadgesAndGenerateTree } from 'merkle-badges'
 
